@@ -11,6 +11,7 @@ export interface NativeProps extends ViewProps {
   endPoint?: PointValue;
   colors: ReadonlyArray<ColorValue>;
   locations?: ReadonlyArray<Float>;
+  dither?: boolean;
   useAngle?: boolean;
   angleCenter?: PointValue;
   angle?: Float;

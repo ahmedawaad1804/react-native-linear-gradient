@@ -160,6 +160,10 @@ An optional array of numbers defining the location of each gradient color stop, 
 
 ![Example with extra props](https://raw.githubusercontent.com/react-native-community/react-native-linear-gradient/HEAD/images/example-other-props.png)
 
+#### dither (Android)
+
+Set `dither` to `true` to reduce visible bands between similar colors in a gradient. It defaults to `false`.
+
 #### useAngle / angle / angleCenter
 
 You may want to achieve an angled gradient effect, similar to those in image editors like Photoshop.

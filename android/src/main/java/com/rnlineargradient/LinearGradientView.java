@@ -169,6 +169,11 @@ public class LinearGradientView extends View {
         drawGradient();
     }
 
+    public void setDither(boolean dither) {
+        mPaint.setDither(dither);
+        invalidate();
+    }
+
     public void setUseAngle(boolean useAngle) {
         mUseAngle = useAngle;
         drawGradient();

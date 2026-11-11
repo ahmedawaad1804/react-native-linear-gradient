@@ -24,6 +24,8 @@ export interface LinearGradientProps extends ViewProps {
   end?: Point;
   /** Array of color stop positions (0 to 1), must match length of `colors` */
   locations?: readonly number[];
+  /** Enable Android dithering to reduce visible color banding. Defaults to false. */
+  dither?: boolean;
   /** Use `angle` and `angleCenter` instead of `start` and `end` */
   useAngle?: boolean;
   /** Center point for angle-based gradient. Default: `{ x: 0.5, y: 0.5 }` */
@@ -120,6 +122,7 @@ export default class LinearGradient extends Component<LinearGradientProps> {
     const {
       children,
       colors,
+      dither,
       end,
       locations,
       useAngle,
@@ -172,6 +175,7 @@ export default class LinearGradient extends Component<LinearGradientProps> {
           <NativeLinearGradient
             style={styles.absoluteFill}
             {...(gradientProps as any)}
+            dither={dither}
             borderRadii={borderRadiiPerCorner}
           />
           {children}

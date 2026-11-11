@@ -17,6 +17,8 @@ public abstract class LinearGradientManagerSpec<T extends View> extends SimpleVi
 
     public abstract void setLocations(T view, @Nullable ReadableArray locations);
 
+    public abstract void setDither(T view, boolean dither);
+
     public abstract void setUseAngle(T view, boolean useAngle);
 
     public abstract void setAngleCenter(T view, @Nullable ReadableMap angleCenter);

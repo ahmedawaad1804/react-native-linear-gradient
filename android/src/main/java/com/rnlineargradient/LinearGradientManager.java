@@ -15,6 +15,7 @@ public class LinearGradientManager extends LinearGradientManagerSpec<LinearGradi
     public static final String PROP_LOCATIONS = "locations";
     public static final String PROP_START_POINT = "startPoint";
     public static final String PROP_END_POINT = "endPoint";
+    public static final String PROP_DITHER = "dither";
     public static final String PROP_USE_ANGLE = "useAngle";
     public static final String PROP_ANGLE_CENTER = "angleCenter";
     public static final String PROP_ANGLE = "angle";
@@ -56,6 +57,12 @@ public class LinearGradientManager extends LinearGradientManagerSpec<LinearGradi
     @ReactProp(name = PROP_END_POINT)
     public void setEndPoint(LinearGradientView gradientView, ReadableMap endPoint) {
         gradientView.setEndPoint(endPoint);
+    }
+
+    @Override
+    @ReactProp(name = PROP_DITHER, defaultBoolean = false)
+    public void setDither(LinearGradientView gradientView, boolean dither) {
+        gradientView.setDither(dither);
     }
 
     @Override
